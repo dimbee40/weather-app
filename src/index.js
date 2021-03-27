@@ -43,8 +43,8 @@ function weather(response) {
   let temperature = Math.round(response.data.main.temp);
   cityWeather.innerHTML = `${temperature}`;
   let cityDescription = document.querySelector(".descriptor");
-  console.log(response.data.weather.description;);
-  cityDescription.innerHTML = (response.data.weather.description);
+  console.log(response.data.weather.description);
+  cityDescription.innerHTML = response.data.weather.description;
 }
 
 let form = document.querySelector("#search");
