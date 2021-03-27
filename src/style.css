@@ -1,0 +1,68 @@
+body {
+  font-family: "Happy Monkey", cursive;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+  border: 3px solid #3f72af;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 50%;
+  margin-left: 50px;
+}
+
+h1 {
+  color: #3f72af;
+  padding: 10px;
+  text-align: center;
+}
+
+h2,
+h3,
+.currentLocation {
+  color: #3f72af;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.days,
+.temp,
+.recent-cities {
+  color: #3f72af;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.search-bar {
+  padding: 40px;
+}
+.recent-cities-temp {
+  color: #7fa4e9;
+  text-align: center;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.city-describe,
+#celsius-id,
+#faren-id {
+  color: #112d4e;
+  font-weight: 700;
+  font-size: smaller;
+}
+
+.fas,
+.far {
+  color: #7fa4e9;
+}
+
+#city-header {
+  color: #3f72af;
+  padding: 10px;
+  text-align: center;
+  font-size: 2.5rem;
+}
