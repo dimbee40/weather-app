@@ -50,7 +50,8 @@ function weather(response) {
   apparentTemp.innerHTML = `Feels like ${feelTemp}°C`;
   console.log(response.data.list.pop);
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.main.humidity;
+  let humidityPercent = response.data.main.humidity;
+  humidity.innerHTML = `Humidity is ${humidityPercent}%`;
 }
 
 //put in humidity, windspeed, and icon (API codes already)
