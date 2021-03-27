@@ -47,10 +47,13 @@ function weather(response) {
   cityDescription.innerHTML = response.data.weather[0].description;
   let apparentTemp = document.querySelector("#feels");
   let feelTemp = Math.round(response.data.main.feels_like);
-  apparentTemp.innerHTML = `Feels like ${feelTemp}°C`;
+  apparentTemp.innerHTML = `Apparent temperature: Feels like ${feelTemp}°C`;
   let humidity = document.querySelector("#humidity");
   let humidityPercent = response.data.main.humidity;
-  humidity.innerHTML = `Humidity is ${humidityPercent}%`;
+  humidity.innerHTML = `Humidity: ${humidityPercent}%`;
+  let windSpeed = document.querySelector("#wind-speed)");
+  let windSpeedms = Math.round(response.data.wind.speed);
+  windSpeed.innerHTML = `Wind speed ${windSpeedms} m/s`;
 }
 
 //put in humidity, windspeed, and icon (API codes already)
