@@ -44,7 +44,7 @@ function weather(response) {
   cityWeather.innerHTML = `${temperature}`;
   let cityDescription = document.querySelector(".descriptor");
   console.log(response.data.weather[0].description);
-  cityDescription.innerHTML = response.data.weather[0].description;
+  cityDescription.innerHTML = response.data.weather[0].main;
 }
 
 let form = document.querySelector("#search");
