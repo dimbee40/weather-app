@@ -47,7 +47,7 @@ function weather(response) {
   cityDescription.innerHTML = response.data.weather[0].description;
   let apparentTemp = document.querySelector("#feels");
   let feelTemp = Math.round(response.data.main.feels_like);
-  apparentTemp.innerHTML = `${feelTemp}°C`;
+  apparentTemp.innerHTML = `Feels like ${feelTemp}°C`;
 }
 
 let form = document.querySelector("#search");
