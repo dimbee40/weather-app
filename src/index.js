@@ -49,6 +49,8 @@ function weather(response) {
   let feelTemp = Math.round(response.data.main.feels_like);
   apparentTemp.innerHTML = `Feels like ${feelTemp}°C`;
   console.log(response.data.list.pop);
+  //put in humidity, windspeed, and icon (API codes already)
+  http://openweathermap.org/img/wn/10d@2x.png
 }
 
 let form = document.querySelector("#search");
