@@ -50,13 +50,11 @@ function weather(response) {
   apparentTemp.innerHTML = `Feels like ${feelTemp}°C`;
   console.log(response.data.list.pop);
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML=response.data.main.humidity;
-  
-  
-  
-  //put in humidity, windspeed, and icon (API codes already)
-  http://openweathermap.org/img/wn/10d@2x.png
+  humidity.innerHTML = response.data.main.humidity;
 }
+
+//put in humidity, windspeed, and icon (API codes already)
+//  http://openweathermap.org/img/wn/10d@2x.png
 
 let form = document.querySelector("#search");
 form.addEventListener("submit", cityDisplay);
