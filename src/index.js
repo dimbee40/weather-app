@@ -66,17 +66,18 @@ function weather(response) {
 //F to C-->  (°F − 32) × 5/9 = °C
 // C to F --> (°C × 9/5) + 32 = °F
 
- function funits(event) {
-    event.preventDefault();
-    let unitsTemp = document.querySelector("#temperature");
-    console.log(temperature.value);
-    let calculate = temperature.value(9 / 5) + 32;
-    unitsTemp.innerHTML = `${calculate}`;
-  }
+function funits(event) {
+  event.preventDefault();
+  let unitsTemp = document.querySelector("#temperature");
+  console.log(temperature.value);
+  let calculate = temperature.value(9 / 5) + 32;
+  unitsTemp.innerHTML = `${calculate}`;
+}
 function cunits(event) {
   event.preventDefault();
   let unitsTemp = document.querySelector("#temperature");
   unitsTemp.innerHTML = 19;
+}
 
 let clickUnitF = document.querySelector("#faren-id");
 clickUnitF.addEventListener("click", funits);
