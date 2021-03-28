@@ -61,8 +61,6 @@ function weather(response) {
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
 }
-//put in and icon (API codes already)
-//  http://openweathermap.org/img/wn/10d@2x.png
 
 let form = document.querySelector("#search");
 form.addEventListener("submit", cityDisplay);
@@ -72,7 +70,7 @@ form.addEventListener("submit", apiSearch);
 
 //api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
 
-//C to F converstion
+//C to F converstion *****
 
 https: function funits(event) {
   event.preventDefault();
