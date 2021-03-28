@@ -62,20 +62,15 @@ function weather(response) {
   );
 }
 
-let form = document.querySelector("#search");
-form.addEventListener("submit", cityDisplay);
-form.addEventListener("submit", apiSearch);
-
-//display city weather using API
-
-//api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
-
 //C to F converstion *****
+//F to C-->  (°F − 32) × 5/9 = °C
+// C to F --> (°C × 9/5) + 32 = °F
 
-https: function funits(event) {
+function funits(event) {
   event.preventDefault();
   let unitsTemp = document.querySelector("#temperature");
-  unitsTemp.innerHTML = 66;
+  let calculate = value.temperature(9 / 5) + 32;
+  unitsTemp.innerHTML = `${calculate}`;
 }
 
 function cunits(event) {
@@ -89,6 +84,14 @@ clickUnitF.addEventListener("click", funits);
 
 let clickUnitC = document.querySelector("#celsius-id");
 clickUnitC.addEventListener("click", cunits);
+
+let form = document.querySelector("#search");
+form.addEventListener("submit", cityDisplay);
+form.addEventListener("submit", apiSearch);
+
+//display city weather using API
+
+//api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
 
 //geolocator button temperature
 function buttonWeather(response) {
