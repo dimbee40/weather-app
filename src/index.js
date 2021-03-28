@@ -2,6 +2,9 @@
 
 let now = new Date();
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 let hours = now.getHours();
 
 let days = [
