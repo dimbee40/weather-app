@@ -60,8 +60,6 @@ function weather(response) {
     "src",
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
-
- 
 }
 
 //C to F converstion *****
