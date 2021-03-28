@@ -54,9 +54,14 @@ function weather(response) {
   let windSpeed = document.querySelector("#windspeed");
   let windSpeedms = Math.round(response.data.wind.speed);
   windSpeed.innerHTML = `Wind speed ${windSpeedms} m/s`;
+  let icon = response.data.weather[0].icon;
+  let iconDisplay = document.querySelector("#icon--today");
+  iconDisplay.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
-
-//put in humidity, windspeed, and icon (API codes already)
+//put in and icon (API codes already)
 //  http://openweathermap.org/img/wn/10d@2x.png
 
 let form = document.querySelector("#search");
