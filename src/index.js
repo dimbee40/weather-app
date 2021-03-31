@@ -92,6 +92,7 @@ form.addEventListener("submit", apiSearch);
 //api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
 
 //geolocator button temperature
+function forecast(response) {}
 
 function handlePosition(position) {
   function weather(response) {
@@ -127,7 +128,9 @@ function handlePosition(position) {
   let lon = position.coords.longitude;
   let key = "3ec119a7b4622feedeeba843b106eb0a";
   let urlAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+  let urlAPIfor = `httmps://pro.openweathermap.org/data/2.5/forecast/climate?lat=${lat}&lon=${lon}&cnt=5&appid=${key}&units=metric`;
   axios.get(urlAPI).then(weather);
+  axios.get(urlAPIfor).then(forecast);
 }
 
 navigator.geolocation.getCurrentPosition(handlePosition);
