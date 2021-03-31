@@ -73,14 +73,12 @@ function weather(response) {
     let apparentFaren = Math.round(feelTemp * (9 / 5) + 32);
     apparentTemp.innerHTML = `Apparent temperature: Feels like ${apparentFaren}°F`;
   }
-  function cunits(event) {
-    event.preventDefault();
-    let unitsTemp = document.querySelector("#temperature");
-    unitsTemp.innerHTML = 19;
-  }
 
-  let clickUnitF = document.querySelector("#unit-id");
+  let clickUnitF = document.querySelector("#unit-id-faren");
   clickUnitF.addEventListener("click", funits);
+
+  let clickUnitC = document.querySelector("#unit-id-cel");
+  clickUnitC.addEventListener("click", weather);
 }
 
 //C to F converstion *****
@@ -123,15 +121,6 @@ function handlePosition(position) {
       "src",
       `http://openweathermap.org/img/wn/${icon}@2x.png`
     );
-    function funits(event) {
-      event.preventDefault();
-      let unitsTemp = document.querySelector("#temperature");
-      console.log(temperature.value);
-      let calculate = Math.round(temperature * (9 / 5) + 32);
-      unitsTemp.innerHTML = `${calculate}°F`;
-      let apparentFaren = Math.round(feelTemp * (9 / 5) + 32);
-      apparentTemp.innerHTML = `Apparent temperature: Feels like ${apparentFaren}°F`;
-    }
   }
 
   console.log(position.coords.latitude);
