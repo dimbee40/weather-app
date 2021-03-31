@@ -78,7 +78,7 @@ function weather(response) {
   clickUnitF.addEventListener("click", funits);
 
   let clickUnitC = document.querySelector("#unit-id-cel");
-  clickUnitC.addEventListener("click", weather);
+  clickUnitC.addEventListener("click", apiSearch);
 }
 
 //C to F converstion *****
@@ -88,8 +88,6 @@ function weather(response) {
 let form = document.querySelector("#search");
 form.addEventListener("submit", cityDisplay);
 form.addEventListener("submit", apiSearch);
-
-//display city weather using API
 
 //api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
 
