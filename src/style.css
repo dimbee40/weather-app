@@ -1,9 +1,8 @@
 body {
   font-family: "Happy Monkey", cursive;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 
   border: 3px solid #3f72af;
-  padding: 20px;
+  padding: 0px;
   border-radius: 5px;
   max-width: 50%;
   margin-left: 50px;
@@ -15,6 +14,9 @@ h1 {
   text-align: center;
 }
 
+.background {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
 h2,
 h3,
 .currentLocation {
@@ -37,7 +39,8 @@ ul {
   text-align: center;
 }
 
-.search-bar {
+.search-bar,
+.footer {
   padding: 40px;
 }
 .recent-cities-temp {
