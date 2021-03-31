@@ -21,7 +21,7 @@ let day = days[now.getDay()];
 let currentDate = document.querySelector(".dateTime");
 currentDate.innerHTML = `${day}, ${hours}:${minutes}`;
 
-//add city name after search
+//display city name
 
 function cityDisplay(event) {
   event.preventDefault();
@@ -81,19 +81,9 @@ function weather(response) {
   clickUnitC.addEventListener("click", apiSearch);
 }
 
-function forecast(response) {}
-
-//C to F converstion *****
-//F to C-->  (°F − 32) × 5/9 = °C
-// C to F --> (°C × 9/5) + 32 = °F
-
 let form = document.querySelector("#search");
 form.addEventListener("submit", cityDisplay);
 form.addEventListener("submit", apiSearch);
-
-//api.openweathermap.org/data/2.5/weather?q=canberra&appid=3ec119a7b4622feedeeba843b106eb0a&units=metric`;
-
-//geolocator button temperature
 
 function handlePosition(position) {
   function weather(response) {
@@ -121,6 +111,22 @@ function handlePosition(position) {
       "src",
       `http://openweathermap.org/img/wn/${icon}@2x.png`
     );
+
+    function funits(event) {
+      event.preventDefault();
+      let unitsTemp = document.querySelector("#temperature");
+      console.log(temperature.value);
+      let calculate = Math.round(temperature * (9 / 5) + 32);
+      unitsTemp.innerHTML = `${calculate}°F`;
+      let apparentFaren = Math.round(feelTemp * (9 / 5) + 32);
+      apparentTemp.innerHTML = `Apparent temperature: Feels like ${apparentFaren}°F`;
+    }
+
+    let clickUnitF = document.querySelector("#unit-id-faren");
+    clickUnitF.addEventListener("click", funits);
+
+    let clickUnitC = document.querySelector("#unit-id-cel");
+    clickUnitC.addEventListener("click", apiSearch);
   }
 
   console.log(position.coords.latitude);
